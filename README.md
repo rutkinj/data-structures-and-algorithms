@@ -1,5 +1,13 @@
 # Data Structures and Algorithms
 
+## Whiteboards
+
+[01 - Insert Shift](java/whiteboards/insert-shift/README.md)
+
+[02 - Array Reverse](java/whiteboards/arrayReverse/README.md)
+
+[03 - Binary Search](java/whiteboards/bindarySearch/README.md)
+
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
 ## Repository Quick Tour and Usage
