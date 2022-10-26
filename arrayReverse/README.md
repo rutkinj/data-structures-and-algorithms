@@ -4,7 +4,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 ## Whiteboard
 
-![image of whiteboarding](/img/whiteboard.png)
+![image of whiteboarding](img/whiteboard.png)
 
 ## Approach and Big O
 
