@@ -4,7 +4,7 @@
 
 ## Code Challenges
 
-### Challenge 05
+### Challenge 05 && 06
 
 #### Singly Linked List
 Implement a linked list and nodes.
@@ -20,13 +20,23 @@ Efficiency:
 - toString is O(n) on space as it recreates the input.
 
 #### API
+###### lab-05
 - insert(value)
-  - adds a new note as the head on the linked list
-- includes(value)
+  - adds a new node with value as the head on the linked list
+- includes(searchValue)
   - searches through the linked list for a particular value
   - returns a boolean
 - toString()
   - returns a visual string representation of the linked list
+###### lab-06
+- append(value)
+  - adds new node with value as tail of linked list
+- insertBefore(searchTerm, value)
+  - adds new node with value **before** node with value of searchTerm
+  - if searchTerm not found, souts an error message
+- insertAfter(searchTerm, value)
+  - adds new node with value **after** node with value of searchTerm
+  - if searchTerm not found, souts an error message
 
 Location: `codechallenges/linkedlist/LinkedListChallenges`
 
