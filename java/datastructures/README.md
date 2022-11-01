@@ -1,10 +1,6 @@
 # Data Structures
 
-## Implementation Notes
-
-## Code Challenges
-
-### Challenge 05 && 06
+## Challenge 05 && 06 && 07
 
 #### Singly Linked List
 Implement a linked list and nodes.
@@ -20,23 +16,40 @@ Efficiency:
 - toString is O(n) on space as it recreates the input.
 
 #### API
+
 ###### lab-05
-- insert(value)
+`insert(value)`
   - adds a new node with value as the head on the linked list
-- includes(searchValue)
+
+`includes(searchValue)`
   - searches through the linked list for a particular value
   - returns a boolean
-- toString()
+
+`toString()`
   - returns a visual string representation of the linked list
 ###### lab-06
-- append(value)
+
+`append(value)`
   - adds new node with value as tail of linked list
-- insertBefore(searchTerm, value)
+
+`insertBefore(searchTerm, value)`
   - adds new node with value **before** node with value of searchTerm
   - if searchTerm not found, souts an error message
-- insertAfter(searchTerm, value)
+
+`insertAfter(searchTerm, value)`
   - adds new node with value **after** node with value of searchTerm
   - if searchTerm not found, souts an error message
+###### lab-07
+`kthFromEnd(k)`
+  - returns value at index k from tail
+
+Approach and Efficiency
+
+Tried for tortoise and hare --> one pointer runs through LL to end with second pointer trailing `k` nodes behind. I tried to timebox 1 hour and at like minute 50 I realized I had some sort of off by one issue and then broke everything while "fixing" the issue. Got all tests passing but needs some work.
+- O(n) time --> must run through entire ll
+- O(1) space --> create set number of variables
+
+[Whiteboard](img/kth.png)
 
 Location: `codechallenges/linkedlist/LinkedListChallenges`
 
