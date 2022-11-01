@@ -4,46 +4,53 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class LinkedListTest
-{
-  @Test void createEmptyLinkedList(){
+public class LinkedListTest {
+  @Test
+  void createEmptyLinkedList() {
     LinkedList emptyLL = new LinkedList();
     assertTrue(emptyLL.head == null);
   }
 
-  @Test void insertNewHead(){
+  @Test
+  void insertNewHead() {
     LinkedList linked = new LinkedList();
     linked.insert("bingbong");
     assertTrue(linked.head.value == "bingbong");
   }
 
-  @Test void headPointsToNext(){
-      LinkedList linked = new LinkedList();
-      linked.insert("bingbong");
-      assertTrue(linked.head.next == null);
-    }
-  @Test void insertMultipleNodes(){
+  @Test
+  void headPointsToNext() {
+    LinkedList linked = new LinkedList();
+    linked.insert("bingbong");
+    assertTrue(linked.head.next == null);
+  }
+
+  @Test
+  void insertMultipleNodes() {
     LinkedList linked = new LinkedList();
     linked.insert("bingbong");
     linked.insert("boy howdy!");
     assertTrue(linked.head.next.value == "bingbong");
   }
 
-  @Test void successfullyFindValue(){
+  @Test
+  void successfullyFindValue() {
     LinkedList linked = new LinkedList();
     linked.insert("bingbong");
     linked.insert("boy howdy!");
     assertTrue(linked.includes("bingbong"));
   }
 
-  @Test void failToFindValue(){
+  @Test
+  void failToFindValue() {
     LinkedList linked = new LinkedList();
     linked.insert("bingbong");
     linked.insert("boy howdy!");
     assertFalse(linked.includes("dit dah"));
   }
 
-  @Test void returnValuesAsString(){
+  @Test
+  void returnValuesAsString() {
     LinkedList linked = new LinkedList();
     linked.insert("bingbong");
     linked.insert("boy howdy!");
@@ -51,7 +58,8 @@ public class LinkedListTest
     assertEquals(linked.toString(), expected);
   }
 
-  @Test void insertAtEnd(){
+  @Test
+  void insertAtEnd() {
     LinkedList linked = new LinkedList();
     linked.insert("bingbong");
     linked.insert("boy howdy!");
@@ -60,7 +68,8 @@ public class LinkedListTest
     assertEquals(linked.toString(), expected);
   }
 
-  @Test void insertMultipleAtEnd(){
+  @Test
+  void insertMultipleAtEnd() {
     LinkedList linked = new LinkedList();
     linked.insert("bingbong");
     linked.insert("boy howdy!");
@@ -71,7 +80,8 @@ public class LinkedListTest
     assertEquals(linked.toString(), expected);
   }
 
-  @Test void insertBeforeDitDahMiddle(){
+  @Test
+  void insertBeforeDitDahMiddle() {
     LinkedList linked = new LinkedList();
     linked.insert("bingbong");
     linked.append("dit dah");
@@ -81,7 +91,8 @@ public class LinkedListTest
     assertEquals(linked.toString(), expected);
   }
 
-  @Test void insertAfterDitDahMiddle(){
+  @Test
+  void insertAfterDitDahMiddle() {
     LinkedList linked = new LinkedList();
     linked.insert("bingbong");
     linked.append("dit dah");
@@ -91,7 +102,8 @@ public class LinkedListTest
     assertEquals(linked.toString(), expected);
   }
 
-  @Test void insertAfterDitDahEnd(){
+  @Test
+  void insertAfterDitDahEnd() {
     LinkedList linked = new LinkedList();
     linked.insert("bingbong");
     linked.append("yellerbelly");
@@ -100,4 +112,78 @@ public class LinkedListTest
     String expected = "{ bingbong } => { yellerbelly } => { dit dah } => { wahwah } => NULL";
     assertEquals(linked.toString(), expected);
   }
+
+  @Test
+  void kthFromEndHappyPath() {
+    LinkedList linked = new LinkedList();
+    linked.insert("potato");
+    linked.insert("tomato");
+    linked.insert("cucumber");
+    linked.insert("onion");
+    linked.insert("leek");
+    linked.insert("broccoli");
+    linked.insert("cabbage");
+    assertEquals("onion", linked.kthFromEnd(3));
+  }
+
+  @Test
+  void kthFromEndZero() {
+    LinkedList linked = new LinkedList();
+    linked.insert("potato");
+    linked.insert("tomato");
+    linked.insert("cucumber");
+    linked.insert("onion");
+    linked.insert("leek");
+    linked.insert("broccoli");
+    linked.insert("cabbage");
+    assertEquals("potato", linked.kthFromEnd(0));
+  }
+
+  @Test
+  void kthEqualToLLLength() {
+    LinkedList linked = new LinkedList();
+    linked.insert("potato");
+    linked.insert("tomato");
+    linked.insert("cucumber");
+    linked.insert("onion");
+    linked.insert("leek");
+    linked.insert("broccoli");
+    linked.insert("cabbage");
+    assertEquals("cabbage", linked.kthFromEnd(6));
+  }
+
+  @Test
+  void kthFromEndNegative() {
+    LinkedList linked = new LinkedList();
+    linked.insert("potato");
+    linked.insert("tomato");
+    linked.insert("cucumber");
+    linked.insert("onion");
+    linked.insert("leek");
+    linked.insert("broccoli");
+    linked.insert("cabbage");
+    assertThrows(IllegalArgumentException.class, () -> linked.kthFromEnd(-3));
+  }
+
+  @Test
+  void kthLargerThanLLLength() {
+    LinkedList linked = new LinkedList();
+    linked.insert("potato");
+    linked.insert("tomato");
+    linked.insert("cucumber");
+    linked.insert("onion");
+    linked.insert("leek");
+    linked.insert("broccoli");
+    linked.insert("cabbage");
+    assertThrows(NullPointerException.class, () -> linked.kthFromEnd(7));
+  }
+
+  @Test
+  void kthFromEndTinyLL() {
+    LinkedList linked = new LinkedList();
+    linked.insert("potato");
+    assertEquals("potato", linked.kthFromEnd(0));
+    assertThrows(NullPointerException.class, () -> linked.kthFromEnd(1));
+  }
+
 }

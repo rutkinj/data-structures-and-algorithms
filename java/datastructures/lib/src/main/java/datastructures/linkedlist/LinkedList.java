@@ -1,5 +1,7 @@
 package datastructures.linkedlist;
 
+import org.apache.commons.math3.exception.OutOfRangeException;
+
 public class LinkedList
 {
   public Node head = null;
@@ -70,5 +72,23 @@ public class LinkedList
       current = current.next;
     }
     System.out.println("Search value not found");
+  }
+
+  public String kthFromEnd(int k){
+    if(k < 0) throw new IllegalArgumentException("Input can not be negative.");
+    int i = 0;
+    Node front = head;
+    Node rear = null;
+    while (front != null){
+      if(i-k > 0){
+        rear = rear.next;
+      } else if (i-k == 0) {
+        rear = head;
+      }
+      front = front.next;
+      i++;
+    }
+    if(i-k < 0) throw new IllegalArgumentException("Input exceeds linked list length.");
+    return rear.value;
   }
 }
