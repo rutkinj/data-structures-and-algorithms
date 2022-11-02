@@ -175,7 +175,7 @@ public class LinkedListTest {
     linked.insert("leek");
     linked.insert("broccoli");
     linked.insert("cabbage");
-    assertThrows(NullPointerException.class, () -> linked.kthFromEnd(7));
+    assertThrows(IllegalArgumentException.class, () -> linked.kthFromEnd(7));
   }
 
   @Test
@@ -183,7 +183,17 @@ public class LinkedListTest {
     LinkedList linked = new LinkedList();
     linked.insert("potato");
     assertEquals("potato", linked.kthFromEnd(0));
-    assertThrows(NullPointerException.class, () -> linked.kthFromEnd(1));
+    assertThrows(IllegalArgumentException.class, () -> linked.kthFromEnd(1));
+  }
+
+  @Test
+  void kthFromEndSmallLL() {
+    LinkedList linked = new LinkedList();
+    linked.insert("potato");
+    linked.insert("tomato");
+    assertEquals("potato", linked.kthFromEnd(0));
+    assertEquals("tomato", linked.kthFromEnd(1));
+    assertThrows(IllegalArgumentException.class, () -> linked.kthFromEnd(2));
   }
 
 }

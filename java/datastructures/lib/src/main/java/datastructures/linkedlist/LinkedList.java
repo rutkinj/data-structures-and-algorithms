@@ -78,17 +78,15 @@ public class LinkedList
     if(k < 0) throw new IllegalArgumentException("Input can not be negative.");
     int i = 0;
     Node front = head;
-    Node rear = null;
+    Node rear = head;
     while (front != null){
       if(i-k > 0){
         rear = rear.next;
-      } else if (i-k == 0) {
-        rear = head;
       }
       front = front.next;
       i++;
     }
-    if(i-k < 0) throw new IllegalArgumentException("Input exceeds linked list length.");
+    if(i <= k) throw new IllegalArgumentException("Input exceeds linked list length.");
     return rear.value;
   }
 }
