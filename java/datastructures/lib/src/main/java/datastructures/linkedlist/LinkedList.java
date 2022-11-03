@@ -91,4 +91,25 @@ public class LinkedList
     if(i-k < 0) throw new IllegalArgumentException("Input exceeds linked list length.");
     return rear.value;
   }
+
+  public static LinkedList linkedListZip(LinkedList a, LinkedList b) {
+    Node i = a.head;
+    Node j = b.head;
+    Node tmpi = i.next;
+    Node tmpj = j.next;
+
+    while (tmpi != null || tmpj != null) {
+      i.next = j;
+      j.next = tmpi;
+
+      i = tmpi;
+      tmpi = tmpi.next;
+
+      j = tmpj;
+      tmpj = tmpj.next;
+    }
+    i.next = j;
+    j.next = null;
+    return a;
+  }
 }
