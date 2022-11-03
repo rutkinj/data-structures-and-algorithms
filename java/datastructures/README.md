@@ -17,7 +17,7 @@ Efficiency:
 
 #### API
 
-###### lab-05
+###### cc-05
 `insert(value)`
   - adds a new node with value as the head on the linked list
 
@@ -27,7 +27,7 @@ Efficiency:
 
 `toString()`
   - returns a visual string representation of the linked list
-###### lab-06
+###### cc-06
 
 `append(value)`
   - adds new node with value as tail of linked list
@@ -39,7 +39,7 @@ Efficiency:
 `insertAfter(searchTerm, value)`
   - adds new node with value **after** node with value of searchTerm
   - if searchTerm not found, souts an error message
-###### lab-07
+###### cc-07
 `kthFromEnd(k)`
   - returns value at index k from tail
 
@@ -50,6 +50,19 @@ Tried for tortoise and hare --> one pointer runs through LL to end with second p
 - O(1) space --> create set number of variables
 
 [Whiteboard](img/kth.png)
+
+###### cc-08
+`linkedListZip(LL1, LL2)`
+  - zips two linked lists together by alternating nodes
+  - currently only "happy path" works
+
+Approach and Efficiency
+
+Implemented solution with two pointers and two temps
+- O(2n) time --> must run through both ll (and I think 2n is a valid big O?)
+- O(1) space --> four pointers regardless of ll size
+
+[Whiteboard](img/zip.png)
 
 Location: `codechallenges/linkedlist/LinkedListChallenges`
 
