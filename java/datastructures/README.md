@@ -64,6 +64,41 @@ Implemented solution with two pointers and two temps
 
 [Whiteboard](img/zip.png)
 
+## Challenge 10
+
+Stacks and Queues. Implement stacks and queues using linked list class as a guide.
+
+## Approach & Efficiency
+Both classes are barebones implementations with only the ability to add and remove nodes one at a time. All methods have O(1) for both time and space complexity.
+
+## API
+### Stack
+`push(value)`
+- adds a new node with value to the top of the stack
+
+`pop()`
+- removes the top node from the stack and returns its value
+
+`peek()`
+- returns the value of the stacks top node
+
+`isEmpty()`
+- returns a boolean indicating whether there are any nodes in the stack
+
+### Queue
+`enqueue(value)`
+- adds a new node with value to the end of the queue
+
+`dequeue()`
+- removes the node at the front of the queue and returns its value
+
+`peek()`
+- returns the value of the queues front node
+
+`isEmpty()`
+- returns a boolean indicating whether there are any nodes in the queue
+
+
 Location: `codechallenges/linkedlist/LinkedListChallenges`
 
 Method: `linkedListChallenge06()`
