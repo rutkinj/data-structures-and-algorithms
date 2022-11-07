@@ -11,6 +11,8 @@
 ## Data Structures
 
 [05 - 07 - Linked List](java/datastructures/README.md)
+[10 - Stack and Queue](java/datastructures/README.md)
+
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
