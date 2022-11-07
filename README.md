@@ -11,6 +11,7 @@
 ## Data Structures
 
 [05 - 07 - Linked List](java/datastructures/README.md)
+
 [10 - Stack and Queue](java/datastructures/README.md)
 
 
