@@ -113,6 +113,8 @@ Dequeue is trickier. If the stack representing the front has something in it, ju
 `dequeue()`
 - removes the node at the front of the pseudoqueue and returns its value. if nodes in rear, performs costly operation. if no nodes, throws exception
 
+[Visualization](img/pseudoQ.png)
+
 Location: `codechallenges/linkedlist/LinkedListChallenges`
 
 Method: `linkedListChallenge06()`
