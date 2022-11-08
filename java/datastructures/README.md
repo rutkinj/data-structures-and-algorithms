@@ -98,6 +98,22 @@ Both classes are barebones implementations with only the ability to add and remo
 `isEmpty()`
 - returns a boolean indicating whether there are any nodes in the queue
 
+## Challenge 11
+Pseudoqueue. Make a new class that emulates a queue using two stacks. Pseudoqueue should be able to enqueue and dequeue.
+
+## Approach & Efficiency
+Enqueue was very simple. Simply push a new node onto the stack representing the rear. O(1) for time and space.
+
+Dequeue is trickier. If the stack representing the front has something in it, just pop it. But when it's empty? Pop rear until it's empty, pushing each value to front as you go, then pop front at the end. This is O(n) for time and, because of how pop and push are implemented O(n) for space as well: each push makes a new node...
+
+## API
+`enqueue(value)`
+- adds a new node with value to the end of the pseudoqueue
+
+`dequeue()`
+- removes the node at the front of the pseudoqueue and returns its value. if nodes in rear, performs costly operation. if no nodes, throws exception
+
+[Visualization](img/pseudoQ.png)
 
 Location: `codechallenges/linkedlist/LinkedListChallenges`
 
