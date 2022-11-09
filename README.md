@@ -16,7 +16,8 @@
 
 [11 - PseduoQueue](java/datastructures/README.md)
 
-[12 - Animal Shelter](java/datastructures/lib/src/main/java/datastructures/animalshalter/README.md)
+[12 - Animal Shelter](java/datastructures/lib/src/main/java/datastructures/animalshelter/README.md)
+
 
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
