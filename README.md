@@ -18,6 +18,8 @@
 
 [12 - Animal Shelter](java/datastructures/lib/src/main/java/datastructures/animalshelter/README.md)
 
+[15 - Binary Trees](java/datastructures/lib/src/main/java/datastructures/trees/README.md)
+
 
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
