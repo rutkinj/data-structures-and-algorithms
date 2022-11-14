@@ -77,4 +77,17 @@ public class TreesTest {
     assertTrue(sut.contains(6));
     assertFalse(sut.contains(7));
   }
+
+  @Test void returnsHighest(){
+    BinarySearchTree sut = new BinarySearchTree();
+    sut.add(4);
+    sut.add(2);
+    sut.add(1);
+    sut.add(3);
+    sut.add(8);
+    sut.add(6);
+    sut.add(10);
+    assertEquals(10, sut.findMax());
+  }
+
 }
