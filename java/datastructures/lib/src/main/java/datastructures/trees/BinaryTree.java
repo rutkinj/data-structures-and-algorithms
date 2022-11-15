@@ -55,4 +55,21 @@ public class BinaryTree {
     values.add(node.value);
   }
 
+  public Integer findMax(){
+    Integer hi = root.value;
+    hi = findMax(root, hi);
+    return hi;
+  }
+
+  private Integer findMax(Node node, Integer hi){
+    if(node != null){
+    // root -> left -> right
+      if (node.value > hi) {
+        hi = node.value;
+      }
+      hi = findMax(node.left, hi);
+      hi = findMax(node.right, hi);
+    }
+    return hi;
+  }
 }

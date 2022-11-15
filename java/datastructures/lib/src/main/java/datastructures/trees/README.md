@@ -11,8 +11,15 @@ Implement the classes Node, BinaryTree and BinarySearchTree. Create methods for 
 
 `postorder()` traverses the tree from left >> right >> root and returns the traversal as an array of values
 
+`findMax()` traverses the tree in a preorder fashion and returns the highest value found
+
 ### Binary Sort Tree
 `add(Integer value)` creates a node with `value` and places that node in the appropriate location within the tree according to a binary sort. If the value is already present, no change is made.
 
 `contains(Integer value)` performs a binary search, looking for a node that contains `value`. returns a boolean based on result.
+
+### Whiteboards
+
+findMax
+![findMax whiteboard](findMax.png)
 
