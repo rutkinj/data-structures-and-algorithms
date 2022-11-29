@@ -3,6 +3,7 @@ package datastructures.trees;
 import org.checkerframework.checker.units.qual.A;
 
 import java.util.ArrayList;
+import java.util.Queue;
 
 public class BinaryTree {
   Node root;
@@ -71,5 +72,17 @@ public class BinaryTree {
       hi = findMax(node.right, hi);
     }
     return hi;
+  }
+
+  public static ArrayList<Integer> breadthFirst(BinaryTree tree){
+    ArrayList<Integer> retArr = new ArrayList<>();
+    Queue q = null;
+    Node temp = null;
+    q.add(tree.root);
+    while (!q.isEmpty()) {
+
+    }
+
+    return retArr;
   }
 }
