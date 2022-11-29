@@ -20,6 +20,8 @@
 
 [15 - Binary Trees](java/datastructures/lib/src/main/java/datastructures/trees/README.md)
 
+[26 - Insertion Sort](java/datastructures/lib/src/main/java/sorts/blog.md)
+
 
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
