@@ -20,7 +20,7 @@
 
 [15 - Binary Trees](java/datastructures/lib/src/main/java/datastructures/trees/README.md)
 
-[26 - Insertion Sort](java/datastructures/lib/src/main/java/sorts/blog.md)
+[26 - Insertion Sort](java/datastructures/lib/src/main/java/sorts/insert/blog.md)
 
 
 
