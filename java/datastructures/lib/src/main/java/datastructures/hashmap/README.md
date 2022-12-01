@@ -1,4 +1,4 @@
-# Hashtables
+# HashMap
 
 ## Challenge
 Implement a HashMap class from scratch.
