@@ -22,6 +22,8 @@
 
 [26 - Insertion Sort](java/datastructures/lib/src/main/java/sorts/insert/blog.md)
 
+[30 - HashMap](java/datastructures/lib/src/main/java/datastructures/hashmap/README.md)
+
 
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
