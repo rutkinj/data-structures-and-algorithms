@@ -58,7 +58,7 @@ public class HashMap<K, V> {
     LinkedList<HashMapPair<K,V>> ll = bucketArrList.get(hashedKey);
     if(!ll.isEmpty()){
       for(HashMapPair<K, V> node : ll){
-        if(node.getKey() == key){
+        if(node.getKey().equals(key)){
           return true;
         }
       }
@@ -78,6 +78,19 @@ public class HashMap<K, V> {
       }
     }
     return retArr;
+  }
+
+  public String repeatedWord(String input){
+    String[] splitInput = input.split("\\W+");
+    for(String str:splitInput){
+      str = str.toLowerCase();
+      if (this.has((K) str)){
+        return str;
+      } else {
+        this.set((K) str, (V) "");
+      }
+    }
+    return null;
   }
 
   private int hash(K key){
