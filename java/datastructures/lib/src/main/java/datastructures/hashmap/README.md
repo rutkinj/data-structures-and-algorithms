@@ -10,8 +10,15 @@ If the HashMap contains no collisions, `set`, `get`, and `has` are all O(1) as t
 
 `keys` is 0(n + c), iterates through every kv in the HashMap.
 
+`repeatedWord` is O(n) time and space because of the splitting of the input string. Could be made more efficient for the average case, but worst case will always be O(n).
+
 ## API
 - `set(key, value)` Creates a kv object and then places it in an appropriate location in the hashmap. If a passed in key already exists, then that keys value is updated. Handles collision.
 - `get(key)` Returns the value of the given key. Return null if no key found.
 - `has(key)` Returns true if the key is found, otherwise returns false.
 - `keys` Returns an ArrayList containing all keys in the HashMap
+- `repeatedWord(string)` Finds the first duplicate word in the input string and returns it. Returns null if no repeats are found.
+
+## Whiteboards
+Repeated Word
+![Repeated Word WB](repeatWord.png)
