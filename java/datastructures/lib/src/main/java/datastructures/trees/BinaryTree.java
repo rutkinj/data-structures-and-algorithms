@@ -1,8 +1,11 @@
 package datastructures.trees;
 
 import org.checkerframework.checker.units.qual.A;
+import org.checkerframework.checker.units.qual.K;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Queue;
 
 public class BinaryTree {
@@ -84,5 +87,19 @@ public class BinaryTree {
     }
 
     return retArr;
+  }
+
+  public HashMap<Integer,Integer> inorderHashmap(){
+    HashMap<Integer,Integer> retHashMap = new HashMap();
+    inorderHashmap(root, retHashMap);
+    return retHashMap;
+  }
+
+  private void inorderHashmap(Node node, HashMap retHashMap){
+    if(node == null) return;
+    // left -> root -> right
+    inorderHashmap(node.left, retHashMap);
+    retHashMap.put(node.value, 0);
+    inorderHashmap(node.right, retHashMap);
   }
 }
