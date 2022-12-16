@@ -23,6 +23,7 @@ public class GraphTest {
     Graph<String> sut = new Graph<>(10);
     Vertex<String> firstVert = sut.addVertex("Bingbong");
     Vertex<String> secondVert = sut.addVertex("potato");
+    sut.addEdge(firstVert, secondVert);
     assertEquals(sut.getNeighbors(firstVert).peek().destination, secondVert);
   }
 
