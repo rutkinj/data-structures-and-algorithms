@@ -17,6 +17,7 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
   public Vertex<T> addVertex(T value)  // addNode()
   {
     Vertex<T> newVertex = new Vertex<>(value);
+    adjacencyLists.putIfAbsent(newVertex, new LinkedList<>());
     numberOfVertices++;
     return newVertex;
   }
@@ -30,9 +31,6 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
   {
     Edge<T> newEdge = new Edge<>(destination, weight);
     LinkedList<Edge<T>> edges = adjacencyLists.get(start);
-    if (edges == null) { //<-- this might be problematic
-      edges = new LinkedList<>();
-    }
     edges.add(newEdge);
     adjacencyLists.put(start, edges);
   }

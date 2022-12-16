@@ -19,6 +19,10 @@ public class Edge<T extends Comparable<? super T>> implements Comparable<Vertex<
     this.weight = weight;
   }
 
+  public Vertex<T> getDestination(){
+    return this.destination;
+  }
+
   @Override
   public int compareTo(Vertex<T> o)
   {
